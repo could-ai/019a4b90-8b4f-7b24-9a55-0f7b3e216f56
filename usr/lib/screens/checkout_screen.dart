@@ -25,12 +25,12 @@ class CheckoutScreen extends StatelessWidget {
                   final product = cart.items[index];
                   return ListTile(
                     title: Text(product.name),
-                    subtitle: Text('$${product.price.toStringAsFixed(2)}'),
+                    subtitle: Text('\$${product.price.toStringAsFixed(2)}'),
                   );
                 },
               ),
             ),
-            Text('Total: $${cart.totalPrice.toStringAsFixed(2)}', style: const TextStyle(fontSize: 18)),
+            Text('Total: \$${cart.totalPrice.toStringAsFixed(2)}', style: const TextStyle(fontSize: 18)),
             const SizedBox(height: 16),
             // TODO: Integrate Supabase for user authentication and payment processing
             ElevatedButton(

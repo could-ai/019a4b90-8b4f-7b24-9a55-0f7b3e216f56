@@ -24,7 +24,7 @@ class CartScreen extends StatelessWidget {
                       return ListTile(
                         leading: Image.network(product.imageUrl, width: 50, height: 50, fit: BoxFit.cover),
                         title: Text(product.name),
-                        subtitle: Text('$${product.price.toStringAsFixed(2)}'),
+                        subtitle: Text('\$${product.price.toStringAsFixed(2)}'),
                         trailing: IconButton(
                           icon: const Icon(Icons.remove),
                           onPressed: () => cart.removeItem(product),
@@ -37,7 +37,7 @@ class CartScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
                     children: [
-                      Text('Total: $${cart.totalPrice.toStringAsFixed(2)}', style: const TextStyle(fontSize: 18)),
+                      Text('Total: \$${cart.totalPrice.toStringAsFixed(2)}', style: const TextStyle(fontSize: 18)),
                       ElevatedButton(
                         onPressed: () => Navigator.pushNamed(context, '/checkout'),
                         child: const Text('Proceed to Checkout'),
